@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .titleText {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .phone {
+    width: 150px;
+    height: 300px;
+    background-color: #333;
+    border-radius: 20px;
+    cursor: grab;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-out; /* Animation for returning to center */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+  }
+  
+  .phone:active {
+    cursor: grabbing;
+  }
+  
+  /* Screen */
+  .phone::before {
+    content: "";
+    width: 90%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Speaker */
+  .phone::after {
+    content: "";
+    width: 40px;
+    height: 5px;
+    background-color: #333;
+    border-radius: 2px;
+    margin-top: 10px;
+  }
+  
+  /* Home button */
+  .phone .home-button {
+    width: 30px;
+    height: 30px;
+    background-color: #666;
+    border-radius: 50%;
+    margin-top: auto;
+    margin-bottom: 15px;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  }
+  
